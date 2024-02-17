@@ -13,6 +13,15 @@
 express + vite + Svelte, MPA sample
 
 ***
+### seup
+
+.env
+```
+#EXTERNAL_API_URL
+EXTERNAL_API_URL="http://localhost:4000"
+```
+
+***
 ### svelte-build
 
 ```

@@ -6,12 +6,14 @@
     "build": "node build.js && npx vite build --mode client && npm run build:css",
     "build:css": "npx tailwindcss -i ./src/main.css -o ./public/static/main.css",
     "build:test": "vite build && vite build --mode client",
+    "watch": "npx vite build --mode client --watch",
     "test": "ts-node src/index.ts"
   },
   "dependencies": {
     "axios": "^1.6.5",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
     "esm": "^3.2.25",
     "express": "^4.18.2",
     "express-session": "^1.17.2",
