@@ -12,6 +12,7 @@
 
 express + vite + Svelte, MPA sample
 
+* verceld deploy sample
 ***
 ### seup
 
@@ -28,7 +29,7 @@ EXTERNAL_API_URL="http://localhost"
 npx vite build --mode client
 
 #watch-mode
-npx vite build --mode client --watch
+yarn watch
 ```
 
 ***
