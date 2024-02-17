@@ -1,11 +1,12 @@
 <script lang="ts">
 console.log("#about");
+import Head from '../components/Head.svelte';
 </script>
 
 <!-- -->
 <main>
   <div>
-    <a href="/">[ home ]</a>
+    <Head />
     <hr />
     <h1 class="text-4xl font-bold">About</h1>
   </div>
@@ -13,3 +14,6 @@ console.log("#about");
 
 <style>
 </style>
+<!--
+<a href="/">[ home ]</a>
+-->

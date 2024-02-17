@@ -6,7 +6,7 @@
 
  date    : 2024/02/12
 
- update : 2024/02/14
+ update : 2024/02/17
 
 ***
 
@@ -18,7 +18,7 @@ express + vite + Svelte, MPA sample
 .env
 ```
 #EXTERNAL_API_URL
-EXTERNAL_API_URL="http://localhost:4000"
+EXTERNAL_API_URL="http://localhost"
 ```
 
 ***
