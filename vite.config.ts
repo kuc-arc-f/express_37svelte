@@ -1,5 +1,3 @@
-import pages from '@hono/vite-cloudflare-pages'
-import devServer from '@hono/vite-dev-server'
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 //
@@ -15,6 +13,7 @@ export default defineConfig(({ mode }) => {
           entry: [
             './src/main.ts',
             './src/client/Test.ts',
+            './src/client/TestShow.ts',
             './src/client/About.ts',
           ],
           formats: ['es'],

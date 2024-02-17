@@ -8,8 +8,8 @@ import 'dotenv/config'
 import Top from './pages/App';
 import About from './pages/About';
 import Test from './pages/Test';
+import TestShow from './pages/Test/TestShow';
 //
-//import Common from './lib/Common';
 //import testRouter from './routes/test'; 
 import commonRouter from './routes/commonRouter';
 //
@@ -25,6 +25,9 @@ const errorObj = {ret: "NG", messase: "Error"};
 app.use('/api/common', commonRouter);
 
 //MPA
+app.get('/test/show', (req: any, res: any) => {
+  try { res.send(renderToString(TestShow())); } catch (error) { res.sendStatus(500); }
+});
 app.get('/test', (req: any, res: any) => {
   try { res.send(renderToString(Test())); } catch (error) { res.sendStatus(500); }
 });

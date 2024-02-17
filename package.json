@@ -3,9 +3,10 @@
   "scripts": {
     "dev": "NODE_ENV=develop nodemon",
     "dev:test": "NODE_ENV=develop npx nodemon ./dist/index.js",
-    "build": "node build.js && npx vite build --mode client && npm run build:css",
+    "build": "npm run clean && node build.js && npx vite build --mode client && npm run build:css",
     "build:css": "npx tailwindcss -i ./src/main.css -o ./public/static/main.css",
     "build:test": "vite build && vite build --mode client",
+    "clean": "rimraf dist && rimraf public/static",
     "watch": "npx vite build --mode client --watch",
     "test": "ts-node src/index.ts"
   },
