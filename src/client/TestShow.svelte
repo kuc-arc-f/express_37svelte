@@ -3,7 +3,7 @@ import Head from '../components/Head.svelte';
 //import HttpCommon from './lib/HttpCommon';
 import CrudIndex from './Test/CrudIndex';
 import CrudShow from './Test/CrudShow';
-export let pageItem = {}, itemId= 0;;
+export let pageItem = {}, itemId: number= 0;;
 
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id') || "";
@@ -19,7 +19,7 @@ const handleClick = function(){
  *
  * @return
  */
-const getItem = async function(id) {
+const getItem = async function(id: number) {
   try{
       const item = await CrudShow.get(id);
       pageItem = item;

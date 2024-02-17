@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "check": "svelte-check --tsconfig ./tsconfig.json",
     "dev": "NODE_ENV=develop nodemon",
     "dev:test": "NODE_ENV=develop npx nodemon ./dist/index.js",
     "build": "npm run clean && node build.js && npx vite build --mode client && npm run build:css",

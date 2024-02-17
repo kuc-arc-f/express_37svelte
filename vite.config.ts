@@ -1,13 +1,15 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
+/*
+      define: {
+        "process.env.NODE_ENV": '"production"',
+      },      
+*/
 //
 export default defineConfig(({ mode }) => {
   if (mode === 'client') {
     return {
       plugins: [svelte()], 
-      define: {
-        "process.env.NODE_ENV": '"production"',
-      },      
       build: {
         lib: {
           entry: [

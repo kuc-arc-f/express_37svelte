@@ -5,6 +5,7 @@ import CrudIndex from './Test/CrudIndex';
 console.log("#about");
 //export let item = 100, pageItems = [];
 export let pageItems = [];
+let v2: number = 0;
 //
 const handleClick = function(){
   console.log("#handleClick" , new Date().toString());
