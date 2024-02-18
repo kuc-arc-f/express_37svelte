@@ -41,6 +41,22 @@ const addProc = async function(){
   location.reload();
 //    console.log("addProc");
 }
+/**
+ *
+ * @param
+ *
+ * @return
+ */
+const deleteItem = async function() {
+  try{
+    const result = await CrudShow.delete(itemId);
+    if(result) {
+        window.location.href = '/test';
+    }
+  } catch (e) {
+    console.error(e);
+  } 
+}
 
 </script>
 
@@ -55,6 +71,8 @@ const addProc = async function(){
     <hr class="my-1" />
     <pre>{pageItem.content}</pre>
     <hr class="my-1" />
+    <button on:click={deleteItem} class="btn btn-red"
+    >Delete</button>
   </div>
 </main>
 
