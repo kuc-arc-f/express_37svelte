@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "ts,tsx,svelte", 
+  "ignore": ["src/client/**/*.ts"],
+  "exec": "node build.js && npx vite build --mode client && npm run build:css && node ./dist/index.js"
+}
