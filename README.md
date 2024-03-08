@@ -10,9 +10,9 @@
 
 ***
 
-express + vite + Svelte, MPA sample
+express + Svelte, MPA sample
 
-* verceld deploy sample
+* vercel deploy sample
 ***
 ### seup
 
@@ -20,16 +20,6 @@ express + vite + Svelte, MPA sample
 ```
 #EXTERNAL_API_URL
 EXTERNAL_API_URL="http://localhost"
-```
-
-***
-### svelte-build
-
-```
-npx vite build --mode client
-
-#watch-mode
-yarn watch
 ```
 
 ***
@@ -44,9 +34,20 @@ yarn dev
 ```
 
 ***
+### tailwindcss
+
+```
+npx tailwindcss -i ./src/main.css -o ./public/static/main.css
+
+#watch-mode
+npx tailwindcss -i ./src/main.css -o ./public/static/main.css --watch
+``` 
+
+
+***
 ### blog
 
-* https://zenn.dev/knaka0209/scraps/61ac37c759e1c1
+* https://zenn.dev/knaka0209/books/b1bd883fb8dd95
 
 ***
 
