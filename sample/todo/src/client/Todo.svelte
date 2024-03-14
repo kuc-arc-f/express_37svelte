@@ -1,5 +1,6 @@
 <script lang="ts">
 import Head from '../components/Head.svelte';
+import Footer from '../components/Footer.svelte';
 import HttpCommon from './lib/HttpCommon';
 import CrudIndex from './Todo/CrudIndex';
 console.log("#about");
@@ -46,7 +47,7 @@ const addProc = async function(){
 
 <!-- -->
 <main>
-  <div class="container mx-auto my-2 px-8 bg-white">
+  <div class="main_body_wrap container mx-auto my-2 px-8 bg-white">
     <Head />
     <h1 class="text-4xl font-bold mt-2">Todos</h1>
     <hr class="my-2" />
@@ -74,6 +75,7 @@ const addProc = async function(){
     </div>
     {/each}	    
   </div>
+  <Footer />
 </main>
 
 <style>

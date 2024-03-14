@@ -16,6 +16,10 @@ a {
 }
 .d-none { display: none; }
 
+/*footer */
+.main_body_wrap{ min-height: 600px; }
+/* .footer_wrap{ height: 400px; } */
+
 /* custom_class */
 .container_base {
   @apply container mx-auto px-8 bg-white;
