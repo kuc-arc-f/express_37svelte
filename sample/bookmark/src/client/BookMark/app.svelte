@@ -1,5 +1,6 @@
 <script lang="ts">
 import Head from '../../components/Head.svelte';
+import Footer from '../../components/Footer.svelte';
 import HttpCommon from '../lib/HttpCommon';
 import CrudIndex from './CrudIndex';
 console.log("#about");
@@ -75,6 +76,7 @@ const addProc = async function(){
     </div>
     {/each}	    
   </div>
+  <Footer />
 </main>
 
 <style>
