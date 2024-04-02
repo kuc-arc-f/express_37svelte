@@ -1,18 +1,19 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
+import buildCommon from './src/lib/buildCommon';
 //
-export default defineConfig(({ mode }) => {
+const directoryPath = './src/client';
+//@ts-ignore
+export default defineConfig(async ({ mode }) => {
   if (mode === 'client') {
+    const entryFiles = await buildCommon.getEntryItems(directoryPath);
+    //console.log(entryFiles);
+    //
     return {
       plugins: [svelte()], 
       build: {
         lib: {
-          entry: [
-            './src/main.ts',
-            './src/client/Test.ts',
-            './src/client/TestShow.ts',
-            './src/client/About.ts',
-          ],
+          entry: entryFiles,
           formats: ['es'],
           fileName: '[name]',
         },
