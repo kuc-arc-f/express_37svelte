@@ -6,43 +6,22 @@
 
  date    : 2024/02/12
 
- update : 2024/04/28
+ update : 2024/04/28 
 
 ***
 
 express + Svelte, MPA sample
 
 * vercel deploy sample
-***
-### seup
-
-.env
-```
-#EXTERNAL_API_URL
-EXTERNAL_API_URL="http://localhost"
-```
 
 ***
-### express-build
+### build
 
 ```
 yarn build
-```
-* dev-start
-```
+
 yarn dev
 ```
-
-***
-### tailwindcss
-
-```
-npx tailwindcss -i ./src/main.css -o ./public/static/main.css
-
-#watch-mode
-npx tailwindcss -i ./src/main.css -o ./public/static/main.css --watch
-``` 
-
 
 ***
 ### blog
