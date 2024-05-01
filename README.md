@@ -6,7 +6,7 @@
 
  date    : 2024/02/12
 
- update : 2024/04/28   
+ update : 2024/04/30   
 
 ***
 
@@ -26,7 +26,7 @@ yarn dev
 ***
 ### blog
 
-* https://zenn.dev/knaka0209/books/b1bd883fb8dd95
+* https://zenn.dev/knaka0209/books/b1bd883fb8dd95/viewer/315251
 
 ***
 
