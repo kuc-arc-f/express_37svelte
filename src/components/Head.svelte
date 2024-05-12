@@ -10,8 +10,6 @@
     </span>
     <span><a href="/contact">[ Contact ]</a>
     </span>
-    <span><a href="/test">[ test ]</a>
-    </span>
   </div>
   <hr />
 </header>

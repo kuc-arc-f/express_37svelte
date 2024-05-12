@@ -8,7 +8,6 @@ import Footer from '../components/Footer.svelte';
 <main>
   <div class="container main_body_wrap mx-auto my-2 px-8 bg-white">
     <Head />
-    <hr />
     <h1 class="text-4xl font-bold">Contact!</h1>
   </div>
   <Footer />
@@ -17,5 +16,4 @@ import Footer from '../components/Footer.svelte';
 <style>
 </style>
 <!--
-<a href="/">[ home ]</a>
 -->

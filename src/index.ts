@@ -1,14 +1,12 @@
 
 import express from 'express';
-import { renderToString } from 'react-dom/server';
 const app = express();
 import 'dotenv/config'
 //
+import { htmlSend } from './lib/RenderUtil'
 import Top from './pages/App';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Test from './pages/Test';
-import TestShow from './pages/Test/TestShow';
 //
 //import testRouter from './routes/test'; 
 import commonRouter from './routes/commonRouter';
@@ -24,24 +22,23 @@ const errorObj = {ret: "NG", messase: "Error"};
 app.use('/api/common', commonRouter);
 
 //MPA
-app.get('/test/show', (req: any, res: any) => {
-  try { res.send(renderToString(TestShow())); } catch (error) { res.sendStatus(500); }
-});
-app.get('/test', (req: any, res: any) => {
-  try { res.send(renderToString(Test())); } catch (error) { res.sendStatus(500); }
-});
-app.get('/contact', (req: any, res: any) => {
-  try { res.send(renderToString(Contact())); } catch (error) { res.sendStatus(500);}
-});
-app.get('/about', (req: any, res: any) => {
-  try { res.send(renderToString(About())); } catch (error) { res.sendStatus(500);}
-});
-app.get('/', (req: any, res: any) => {
+app.get('/contact', async (req: any, res: any) => {
   try {
-    res.send(renderToString(Top()));
-  } catch (error) {
-    res.sendStatus(500);
-  }
+    const rendered = await Contact()
+    res.send(htmlSend(rendered.html));
+  } catch (error) { res.sendStatus(500); }
+});
+app.get('/about', async (req: any, res: any) => {
+  try {
+    const rendered = await About()
+    res.send(htmlSend(rendered.html));
+  } catch (error) { res.sendStatus(500); }
+});
+app.get('/', async(req: any, res: any) => {
+  try {
+    const rendered = await Top()
+    res.send(htmlSend(rendered.html));
+  } catch (error) { res.sendStatus(500); }
 });
 
 //start
