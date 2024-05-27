@@ -4,9 +4,9 @@ const app = express();
 import 'dotenv/config'
 //
 import { htmlSend } from './lib/RenderUtil'
-import Top from './pages/App';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import App from './pages/App.svelte';
+import AboutApp from './pages/About.svelte';
+import ContactApp from './pages/Contact.svelte';
 //
 //import testRouter from './routes/test'; 
 import commonRouter from './routes/commonRouter';
@@ -24,19 +24,19 @@ app.use('/api/common', commonRouter);
 //MPA
 app.get('/contact', async (req: any, res: any) => {
   try {
-    const rendered = await Contact()
+    const rendered = await ContactApp.render();
     res.send(htmlSend(rendered.html));
   } catch (error) { res.sendStatus(500); }
 });
 app.get('/about', async (req: any, res: any) => {
   try {
-    const rendered = await About()
+    const rendered = await AboutApp.render();
     res.send(htmlSend(rendered.html));
   } catch (error) { res.sendStatus(500); }
 });
 app.get('/', async(req: any, res: any) => {
   try {
-    const rendered = await Top()
+    const rendered = await App.render();
     res.send(htmlSend(rendered.html));
   } catch (error) { res.sendStatus(500); }
 });
