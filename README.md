@@ -1,12 +1,12 @@
 ﻿# express_37svelte
 
+* test branch
+
  Version: 0.9.2
 
- Author  : Kouji Nakashima / kuc-arc-f.com
+ date    : 2025/06/04
 
- date    : 2024/02/12
-
- update : 2024/05/26     
+ update :
 
 ***
 
